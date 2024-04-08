@@ -1,9 +1,8 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../LogoAimedge.jpeg';
 
 const Navbar = () => {
-
     return (
         <div>
             <nav className="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
@@ -11,8 +10,7 @@ const Navbar = () => {
                     <NavLink to="/dashboard" className="navbar-item" >
                         <img
                             src={logo}
-                            width="100"
-                            height="28"
+                            style={{ width: "110", height: "40px", maxHeight: "none" }}
                             alt="logo" />
                     </NavLink>
 
@@ -27,4 +25,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
