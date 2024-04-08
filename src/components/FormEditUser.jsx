@@ -5,6 +5,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 const FromEditUser = () => {
 
     const [name, setName] = useState('')
+    const [pointContact, setPointContac] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confPassword, setConfPassword] = useState('')
@@ -34,6 +36,8 @@ const FromEditUser = () => {
         try {
             await axios.patch(`http://localhost:3000/users/${id}`, {
                 name: name,
+                pointContact: pointContact,
+                phoneNumber: phoneNumber,
                 email: email,
                 password: password,
                 confPassword: confPassword,
@@ -67,6 +71,31 @@ const FromEditUser = () => {
                                         placeholder='Name'
                                     />
                                 </div>
+                                <div className='field'>
+                                <label className="label">Point Contact</label>
+                                <div className="control">
+                                    <input
+                                        type="text"
+                                        className='input'
+                                        value={pointContact}
+                                        onChange={(e)=> setPointContac(e.target.value)}
+                                        placeholder='Point contact'
+                                    />
+                                </div>
+                            </div>
+
+                            <div className='field'>
+                                <label className="label">Phone Number</label>
+                                <div className="control">
+                                    <input
+                                        type="text"
+                                        className='input'
+                                        value={phoneNumber}
+                                        onChange={(e)=> setPhoneNumber(e.target.value)}
+                                        placeholder='Phone number'
+                                    />
+                                </div>
+                            </div>
                             </div>
                             <div className='field'>
                                 <label className="label">Email</label>

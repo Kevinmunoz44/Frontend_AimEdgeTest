@@ -30,6 +30,8 @@ const Userlist = () => {
                     <tr>
                         <th>No</th>
                         <th>Name</th>
+                        <th>pointContact</th>
+                        <th>phoneNumber</th>
                         <th>Email</th>
                         <th>Role</th>
                         <th>Actions</th>
@@ -40,6 +42,8 @@ const Userlist = () => {
                         <tr key={user.uuid}>
                             <td>{index + 1}</td>
                             <td>{user.name}</td>
+                            <td>{user.pointContact}</td>
+                            <td>{user.phoneNumber}</td>
                             <td>{user.email}</td>
                             <td>{user.role}</td>
                             <td>
