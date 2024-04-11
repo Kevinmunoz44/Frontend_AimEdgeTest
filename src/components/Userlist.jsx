@@ -22,8 +22,8 @@ const Userlist = () => {
 
     return (
         <div>
-            <h1 className='title'>Users</h1>
-            <h2 className='subtitle'>List of users</h2>
+            <h1 className='title has-text-black'>Users</h1>
+            <h2 className='subtitle has-text-black'>List of users</h2>
             <Link to='/users/add' className='button is-primary mb-2'>Add new</Link>
             <table className='table is-striped is-fullwidth'>
                 <thead>

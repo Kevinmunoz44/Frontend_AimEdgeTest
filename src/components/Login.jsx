@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-// import logo from '../LogoAimedge.jpeg';
+import logo from '../logoAimEdge.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { LoginUser, reset } from '../features/AuthSlice';
@@ -9,7 +9,6 @@ const Login = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {user, isError, isSuccess, isLoading, message} = useSelector((state) => state.auth);
@@ -32,6 +31,9 @@ const Login = () => {
                 <div className="container">
                     <div className="columns is-centered">
                         <div className="column is-4">
+                            <div className="has-text-centered"> {/* Centra el contenido */}
+                                <img src={logo} alt="logo"/>
+                            </div>
                             <form onSubmit={Auth} className='box'>
                                 {isError && <p className='has-text-centered'>{message}</p>}
                                 <div className='field'>

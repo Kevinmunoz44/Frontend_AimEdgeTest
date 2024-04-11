@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import Layout from './Layout'
-import FormEditProducts from '../components/FormEditProducts'
+import ProductDeatils from '../components/ProductDetails';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getMe } from '../features/AuthSlice';
@@ -21,7 +21,7 @@ const EditProducts = () => {
     }, [isError, navigate]);
     return (
         <Layout>
-            <FormEditProducts />
+            <ProductDeatils />
         </Layout>
     )
 }

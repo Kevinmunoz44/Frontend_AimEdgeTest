@@ -53,8 +53,8 @@ const FromEditUser = () => {
 
     return (
         <div>
-            <h1 className='title'>Users</h1>
-            <h2 className='subtitle'>Update User</h2>
+            <h1 className='title has-text-black'>Users</h1>
+            <h2 className='subtitle has-text-black'>Update User</h2>
             <div className="card is-shadowless">
                 <div className="card-content">
                     <div className="content">
